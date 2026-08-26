@@ -909,9 +909,9 @@ svg {
 .review-card p {
   margin: 0.9rem 0 1.15rem;
   font-family: var(--serif);
-  font-size: clamp(1.15rem, 2.2vw, 1.38rem);
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
   font-style: italic;
-  line-height: 1.4;
+  line-height: 1.45;
   color: var(--cream);
 }
 
@@ -1368,8 +1368,8 @@ svg {
   }
 
   .review-card:first-child p {
-    max-width: 40rem;
-    font-size: 1.7rem;
+    max-width: 44rem;
+    font-size: 1.25rem;
   }
 
   .review-card:nth-child(n + 2) {

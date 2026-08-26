@@ -107,8 +107,8 @@ const REASONS = [
 
 const REVIEWS = [
   {
-    text: 'Biryani Dwar serves delicious chicken biryani with great taste and generous quantity. Freshly prepared, flavorful, and worth every rupee.',
-    name: 'Nihal Arya',
+    text: "अगर आप असली ज़ायके के शौकीन हैं, तो 'बिरयानी द्वार' ज़रूर आइए! स्वाद लाजवाब है, सर्विस और अपनापन दिल जीत लेता है। बिरयानी एकदम ऑथेंटिक, खुशबूदार और बैलेंस मसालों वाली है — सच में आपके बिरयानी के सफर का सही 'द्वार' है!",
+    name: 'Kumar Sandeep',
   },
   {
     text: 'I had an exceptional experience at Biryani Dwar! The food was delicious, the service was fantastic…',
