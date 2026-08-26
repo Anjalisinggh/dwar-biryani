@@ -25,6 +25,7 @@ const LINKS = {
     '&output=embed',
   facebook: 'https://www.facebook.com/nikhil.arya.1690',
   instagram: 'https://www.instagram.com/biryani_dwar_1707',
+  youtube: 'https://youtube.com/@nikskevlogs2202',
 }
 
 const CONTACT = {
@@ -69,12 +70,16 @@ const MENU_GROUPS = [
     name: 'Egg Biryani',
     items: [{ name: 'Egg Biryani', desc: '2 Eggs', price: 80 }],
   },
+  {
+    name: 'Aloo Biryani',
+    items: [{ name: 'Aloo Biryani', desc: 'Potato Biryani', price: 70 }],
+  },
 ]
 
 const EXTRAS = [
   { name: 'Extra Egg', price: 10 },
   { name: 'Extra Aloo', price: 10 },
-  { name: 'Extra Chicken Piece', price: 50 },
+  { name: 'Extra Chicken Piece', price: 40 },
 ]
 
 const REASONS = [
@@ -163,6 +168,7 @@ const icon = {
   facebook: `<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v7h3v-7h2.6l.4-3H14V9z"/></svg>`,
   instagram: `<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4zm10 2H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm-5 3.5A3.5 3.5 0 1 1 8.5 12 3.5 3.5 0 0 1 12 8.5zm0 2A1.5 1.5 0 1 0 13.5 12 1.5 1.5 0 0 0 12 10.5zM17.2 7.3a1 1 0 1 1-1 1 1 1 0 0 1 1-1z"/></svg>`,
   google: `<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.6 12.2c0-.7-.1-1.4-.2-2H12v3.8h5.4a4.6 4.6 0 0 1-2 3v2.5h3.2c1.9-1.7 3-4.3 3-7.3z"/><path fill="currentColor" d="M12 22c2.7 0 5-0.9 6.6-2.4l-3.2-2.5c-.9.6-2 1-3.4 1-2.6 0-4.8-1.8-5.6-4.1H3.1v2.6A10 10 0 0 0 12 22z"/><path fill="currentColor" d="M6.4 13.9A6 6 0 0 1 6.1 12c0-.7.1-1.3.3-1.9V7.5H3.1A10 10 0 0 0 2 12c0 1.6.4 3.1 1.1 4.5l3.3-2.6z"/><path fill="currentColor" d="M12 5.9c1.5 0 2.8.5 3.8 1.5l2.8-2.8C16.9 2.9 14.7 2 12 2A10 10 0 0 0 3.1 7.5l3.3 2.6C7.2 7.7 9.4 5.9 12 5.9z"/></svg>`,
+  youtube: `<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23 12.2s0-3.2-.4-4.6c-.2-.9-.9-1.6-1.8-1.8C18.5 5.4 12 5.4 12 5.4s-6.5 0-8.8.4c-.9.2-1.6.9-1.8 1.8C1 9 1 12.2 1 12.2s0 3.2.4 4.6c.2.9.9 1.6 1.8 1.8 2.3.4 8.8.4 8.8.4s6.5 0 8.8-.4c.9-.2 1.6-.9 1.8-1.8.4-1.4.4-4.6.4-4.6zM9.8 15.5v-6.6l6.3 3.3-6.3 3.3z"/></svg>`,
 }
 
 const pad = (n) => String(n).padStart(2, '0')
@@ -553,6 +559,14 @@ app.innerHTML = `
             aria-label="Check us out on Google"
           >
             ${icon.google}
+          </a>
+          <a
+            href="${LINKS.youtube}"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="YouTube"
+          >
+            ${icon.youtube}
           </a>
         </div>
       </div>
