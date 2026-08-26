@@ -1,8 +1,9 @@
 {
-  "name": "dum",
-  "version": "0.0.0",
+  "name": "biryani-dwar",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
+  "description": "Official website for Biryani Dwar — authentic chicken biryani restaurant in Harnaut, Bihar. Menu, story, reviews, gallery, and WhatsApp ordering.",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

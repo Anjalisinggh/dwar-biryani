@@ -366,6 +366,8 @@ svg {
 
 .hero-copy {
   max-width: 42rem;
+  width: min(42rem, calc(100% - 2 * var(--gutter)));
+  margin-inline: var(--gutter) auto;
 }
 
 .kicker {
@@ -608,8 +610,7 @@ svg {
 }
 
 .why-section,
-.story-section,
-.gallery-section {
+.story-section {
   background: var(--bg);
 }
 
@@ -630,23 +631,23 @@ svg {
 }
 
 .menu-arch {
-  min-height: 22rem;
+  height: clamp(20rem, 50vw, 28rem);
+  width: 100%;
 }
 
 .menu-arch img,
-.story-photo img,
-.gallery-item img {
+.story-photo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
 .menu-arch img {
-  min-height: 22rem;
+  min-height: 0;
+  object-position: center 28%;
 }
 
-.menu-arch figcaption,
-.gallery-item figcaption {
+.menu-arch figcaption {
   position: absolute;
   inset: auto 0 0;
   padding: 1.35rem 1.15rem 1.1rem;
@@ -927,44 +928,6 @@ svg {
   border-bottom-color: var(--brass);
 }
 
-.gallery-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0.7rem;
-}
-
-.gallery-item {
-  position: relative;
-  overflow: hidden;
-  min-height: 16rem;
-  background: var(--bg-3);
-}
-
-.gallery-item img {
-  min-height: 16rem;
-  aspect-ratio: 4 / 5;
-  transition: transform 0.9s var(--ease);
-}
-
-.gallery-item figcaption {
-  opacity: 0;
-  transform: translateY(8px);
-  transition: opacity 0.35s var(--ease), transform 0.35s var(--ease);
-}
-
-.gallery-item:hover figcaption,
-.gallery-item:focus-within figcaption {
-  opacity: 1;
-  transform: none;
-}
-
-@media (hover: none) {
-  .gallery-item figcaption {
-    opacity: 1;
-    transform: none;
-  }
-}
-
 .contact-grid {
   display: grid;
   gap: 1.5rem;
@@ -1180,21 +1143,6 @@ svg {
 }
 
 @media (min-width: 640px) {
-  .gallery-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .gallery-item:nth-child(1),
-  .gallery-item:nth-child(4) {
-    grid-column: span 2;
-  }
-
-  .gallery-item:nth-child(1) img,
-  .gallery-item:nth-child(4) img {
-    aspect-ratio: 16 / 9;
-    min-height: 18rem;
-  }
-
   .reviews-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -1268,13 +1216,17 @@ svg {
   .menu-layout {
     grid-template-columns: 0.88fr 1.12fr;
     gap: 3rem;
-    align-items: stretch;
+    align-items: start;
   }
 
-  .menu-arch,
+  .menu-arch {
+    height: 32rem;
+    width: 100%;
+  }
+
   .menu-arch img {
-    min-height: 100%;
     height: 100%;
+    min-height: 0;
   }
 
   .extras-panel {
@@ -1373,66 +1325,6 @@ svg {
   .review-card:nth-child(n + 2) {
     grid-column: span 3;
   }
-
-  .gallery-grid {
-    grid-template-columns: repeat(12, 1fr);
-    grid-auto-rows: 9.5rem;
-  }
-
-  .gallery-item {
-    min-height: 0;
-  }
-
-  .gallery-item img {
-    min-height: 0;
-    height: 100%;
-    aspect-ratio: auto;
-  }
-
-  .gallery-item:nth-child(1) {
-    grid-column: span 5;
-    grid-row: span 3;
-  }
-
-  .gallery-item:nth-child(2) {
-    grid-column: span 4;
-    grid-row: span 2;
-  }
-
-  .gallery-item:nth-child(3) {
-    grid-column: span 3;
-    grid-row: span 3;
-  }
-
-  .gallery-item:nth-child(4) {
-    grid-column: span 4;
-    grid-row: span 2;
-  }
-
-  .gallery-item:nth-child(5) {
-    grid-column: span 4;
-    grid-row: span 2;
-  }
-
-  .gallery-item:nth-child(6) {
-    grid-column: span 4;
-    grid-row: span 2;
-  }
-
-  .gallery-item:nth-child(7) {
-    grid-column: span 4;
-    grid-row: span 2;
-  }
-
-  .gallery-item:nth-child(8) {
-    grid-column: span 6;
-    grid-row: span 2;
-  }
-
-  .gallery-item:nth-child(9) {
-    grid-column: span 6;
-    grid-row: span 2;
-  }
 }
 
 @media (max-width: 479px) {
@@ -1478,9 +1370,7 @@ svg {
   }
 
   .marquee,
-  .btn,
-  .gallery-item img,
-  .gallery-item figcaption {
+  .btn {
     animation: none !important;
     transition: none !important;
   }
@@ -1489,10 +1379,5 @@ svg {
   .final-media img {
     height: 100%;
     transform: none !important;
-  }
-
-  .gallery-item figcaption {
-    opacity: 1;
-    transform: none;
   }
 }

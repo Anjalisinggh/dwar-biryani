@@ -35,8 +35,8 @@ const CONTACT = {
 
 const IMAGES = {
   hero: u('photo-1589302168068-964664d93dc0', 2000),
-  menuArch: u('photo-1631452180519-c014fe946bc7', 900, 1200),
-  finalCta: u('photo-1606491956689-2ea866880c84', 2000),
+  menuArch: '/assets/biryani-2.jpg',
+  finalCta: '/assets/biryani-3.jpg',
   owner: '/assets/owner.jpg',
 }
 
@@ -45,7 +45,6 @@ const NAV = [
   { label: 'Menu', id: '#menu' },
   { label: 'Our Story', id: '#story' },
   { label: 'Reviews', id: '#reviews' },
-  { label: 'Gallery', id: '#gallery' },
   { label: 'Contact', id: '#contact' },
 ]
 
@@ -131,18 +130,6 @@ const SERVICES = [
   { icon: 'access', label: 'Wheelchair Accessible' },
   { icon: 'restroom', label: 'Toilets Available' },
   { icon: 'family', label: 'Family Friendly' },
-]
-
-const GALLERY = [
-  { src: u('photo-1563379091339-03b21ab4a4f8', 900, 1200), label: 'Chicken Biryani' },
-  { src: u('photo-1596797038530-2c107229654b', 900, 680), label: 'Fresh Off the Handi' },
-  { src: u('photo-1631452180519-c014fe946bc7', 900, 1100), label: 'Chicken Egg Biryani' },
-  { src: IMAGES.owner, label: 'Nikhil Arya — Owner' },
-  { src: u('photo-1596040033229-a9821ebd058d', 900, 1150), label: 'Spices, Carefully Blended' },
-  { src: u('photo-1601050690597-df0568f70950', 900, 860), label: 'Sides & Snacks' },
-  { src: u('photo-1585937421612-70a008356fbe', 900, 980), label: 'Behind the Scenes' },
-  { src: u('photo-1517248135467-4c7edcad34c4', 900, 680), label: 'Inside the Dwar' },
-  { src: u('photo-1589302168068-964664d93dc0', 900, 1000), label: 'Takeaway Ready' },
 ]
 
 const PHRASES = [
@@ -428,32 +415,10 @@ app.innerHTML = `
       </div>
     </section>
 
-    <section class="section gallery-section" id="gallery">
-      <div class="wrap">
-        <div class="section-head">
-          <p class="section-index"><span>${pad(5)}</span> Gallery</p>
-          <h2>
-            <span class="line"><span class="line-inner">Step through</span></span>
-            <span class="line"><span class="line-inner italic">the Dwar</span></span>
-          </h2>
-          <p class="section-note">Discover the flavour. Your favourite plate is just one Dwar away.</p>
-        </div>
-        <div class="gallery-grid">
-          ${GALLERY.map(
-            (item) => `
-            <figure class="gallery-item">
-              <img src="${item.src}" alt="${item.label}" loading="lazy" />
-              <figcaption>${item.label}</figcaption>
-            </figure>`,
-          ).join('')}
-        </div>
-      </div>
-    </section>
-
     <section class="section contact-section" id="contact">
       <div class="wrap">
         <div class="section-head">
-          <p class="section-index"><span>${pad(6)}</span> Find Us</p>
+          <p class="section-index"><span>${pad(5)}</span> Find Us</p>
           <h2>
             <span class="line"><span class="line-inner">One Dwar away</span></span>
             <span class="line"><span class="line-inner italic">in Harnaut</span></span>
@@ -767,7 +732,6 @@ const initMotion = () => {
   batchIn('.extras-panel > *', { y: 24, stagger: 0.08 })
   batchIn('.why-item', { y: 28, stagger: 0.08 })
   batchIn('.review-card', { y: 30, stagger: 0.1 })
-  batchIn('.gallery-item', { y: 28, stagger: 0.07 })
   batchIn('.service-list li', { y: 12, stagger: 0.04, duration: 0.55 })
 
   gsap.from('.menu-arch', {
@@ -827,16 +791,6 @@ const initMotion = () => {
     stagger: 0.1,
     ease: 'power3.out',
     scrollTrigger: { trigger: '.final-copy', start: 'top 78%', once: true },
-  })
-
-  document.querySelectorAll('.gallery-item').forEach((item) => {
-    const img = item.querySelector('img')
-    item.addEventListener('mouseenter', () => {
-      gsap.to(img, { scale: 1.06, duration: 0.9, ease: 'power2.out' })
-    })
-    item.addEventListener('mouseleave', () => {
-      gsap.to(img, { scale: 1, duration: 0.9, ease: 'power2.out' })
-    })
   })
 
   document.querySelectorAll('.btn').forEach((btn) => {
