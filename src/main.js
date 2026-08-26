@@ -237,7 +237,7 @@ app.innerHTML = `
           </div>
           <div>
             <dt>Daily</dt>
-            <dd>11 AM – 9 PM</dd>
+            <dd>12 PM – 9 PM</dd>
           </div>
         </dl>
         <div class="hero-actions">
@@ -318,9 +318,6 @@ app.innerHTML = `
               </li>`,
             ).join('')}
           </ul>
-          <a class="btn btn-gold" href="${LINKS.whatsapp}" target="_blank" rel="noopener noreferrer">
-            ${icon.bowl} Order Your Biryani
-          </a>
         </aside>
       </div>
     </section>
@@ -447,7 +444,7 @@ app.innerHTML = `
             <div class="contact-block">
               <p class="eyebrow">Hours</p>
               <p class="hours-lead">Open daily</p>
-              <p class="hours-time">${icon.clock} 11:00 AM – 9:00 PM</p>
+              <p class="hours-time">${icon.clock} 12:00 PM – 9:00 PM</p>
               <p class="hours-note">Monday through Sunday</p>
             </div>
 
@@ -577,7 +574,7 @@ app.innerHTML = `
       </nav>
       <div class="footer-meta">
         <p>Harnaut, Bihar</p>
-        <p>Open Daily 11 AM – 9 PM</p>
+        <p>Open Daily 12 PM – 9 PM</p>
         <p class="copyright">© ${new Date().getFullYear()} Biryani Dwar</p>
       </div>
     </div>

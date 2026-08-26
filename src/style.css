@@ -761,10 +761,6 @@ svg {
   border-bottom: 1px solid var(--line);
 }
 
-.extras-panel .btn {
-  width: fit-content;
-  align-self: end;
-}
 
 .why-grid {
   display: grid;
@@ -1286,7 +1282,7 @@ svg {
   }
 
   .extras-panel {
-    grid-template-columns: 1.1fr 1.2fr auto;
+    grid-template-columns: 1.1fr 1.2fr;
     align-items: end;
     gap: 2rem;
   }
