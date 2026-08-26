@@ -37,6 +37,8 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 body {
@@ -45,6 +47,7 @@ body {
   color: var(--cream);
   padding-bottom: var(--bar-h);
   overflow-x: hidden;
+  max-width: 100%;
 }
 
 body.nav-open {
@@ -54,6 +57,10 @@ body.nav-open {
 img {
   max-width: 100%;
   display: block;
+}
+
+figure {
+  margin: 0;
 }
 
 a,
@@ -119,6 +126,7 @@ svg {
 
 .wrap {
   width: min(var(--wrap), calc(100% - 2 * var(--gutter)));
+  max-width: 100%;
   margin-inline: auto;
 }
 
@@ -183,6 +191,8 @@ svg {
   position: fixed;
   inset: 0 0 auto;
   z-index: 40;
+  width: 100%;
+  max-width: 100%;
   height: var(--header-h);
   display: flex;
   align-items: center;
@@ -633,6 +643,8 @@ svg {
 .menu-arch {
   height: clamp(20rem, 50vw, 28rem);
   width: 100%;
+  max-width: 100%;
+  margin: 0;
 }
 
 .menu-arch img,

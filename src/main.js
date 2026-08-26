@@ -739,6 +739,7 @@ const initMotion = () => {
     autoAlpha: 0,
     duration: 1.2,
     ease: 'power3.out',
+    clearProps: 'clipPath,opacity,visibility',
     scrollTrigger: { trigger: '.menu-arch', start: 'top 80%', once: true },
   })
 
@@ -747,6 +748,7 @@ const initMotion = () => {
     autoAlpha: 0,
     duration: 1.1,
     ease: 'power3.out',
+    clearProps: 'all',
     scrollTrigger: { trigger: '.story-photo', start: 'top 80%', once: true },
   })
 
