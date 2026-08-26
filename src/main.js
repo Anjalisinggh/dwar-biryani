@@ -169,6 +169,8 @@ const icon = {
   instagram: `<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4zm10 2H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm-5 3.5A3.5 3.5 0 1 1 8.5 12 3.5 3.5 0 0 1 12 8.5zm0 2A1.5 1.5 0 1 0 13.5 12 1.5 1.5 0 0 0 12 10.5zM17.2 7.3a1 1 0 1 1-1 1 1 1 0 0 1 1-1z"/></svg>`,
   google: `<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.6 12.2c0-.7-.1-1.4-.2-2H12v3.8h5.4a4.6 4.6 0 0 1-2 3v2.5h3.2c1.9-1.7 3-4.3 3-7.3z"/><path fill="currentColor" d="M12 22c2.7 0 5-0.9 6.6-2.4l-3.2-2.5c-.9.6-2 1-3.4 1-2.6 0-4.8-1.8-5.6-4.1H3.1v2.6A10 10 0 0 0 12 22z"/><path fill="currentColor" d="M6.4 13.9A6 6 0 0 1 6.1 12c0-.7.1-1.3.3-1.9V7.5H3.1A10 10 0 0 0 2 12c0 1.6.4 3.1 1.1 4.5l3.3-2.6z"/><path fill="currentColor" d="M12 5.9c1.5 0 2.8.5 3.8 1.5l2.8-2.8C16.9 2.9 14.7 2 12 2A10 10 0 0 0 3.1 7.5l3.3 2.6C7.2 7.7 9.4 5.9 12 5.9z"/></svg>`,
   youtube: `<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23 12.2s0-3.2-.4-4.6c-.2-.9-.9-1.6-1.8-1.8C18.5 5.4 12 5.4 12 5.4s-6.5 0-8.8.4c-.9.2-1.6.9-1.8 1.8C1 9 1 12.2 1 12.2s0 3.2.4 4.6c.2.9.9 1.6 1.8 1.8 2.3.4 8.8.4 8.8.4s6.5 0 8.8-.4c.9-.2 1.6-.9 1.8-1.8.4-1.4.4-4.6.4-4.6zM9.8 15.5v-6.6l6.3 3.3-6.3 3.3z"/></svg>`,
+  whatsapp: `<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2c-5.46 0-9.91 4.43-9.91 9.88 0 1.74.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.9-4.43 9.9-9.88C21.94 6.43 17.5 2 12.04 2zm5.79 14.16c-.24.68-1.41 1.25-1.95 1.33-.5.07-1.13.1-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.26-4.79-4.2-4.93-4.39-.14-.19-1.15-1.53-1.15-2.92 0-1.39.73-2.07.99-2.36.26-.29.57-.36.76-.36h.55c.17 0 .41-.07.64.49.24.58.82 2 .89 2.15.07.14.12.31.02.5-.1.19-.14.31-.29.48-.14.17-.31.38-.44.51-.14.14-.29.29-.12.57.16.29.73 1.2 1.56 1.95 1.08.96 1.98 1.26 2.26 1.4.29.14.45.12.62-.07.17-.19.71-.83.9-1.11.19-.29.38-.24.64-.14.26.1 1.67.79 1.95.93.29.14.48.21.55.33.07.12.07.68-.17 1.36z"/></svg>`,
+  fleuron: `<svg class="fleuron" viewBox="0 0 64 20" aria-hidden="true"><path fill="currentColor" d="M32 2c2.4 3.2 4.2 6.2 4.2 8s-1.8 4.8-4.2 8c-2.4-3.2-4.2-6.2-4.2-8S29.6 5.2 32 2zm-11 8c2.8 1.2 5.2 2.1 7 2.1s4.2-.9 7-2.1c-2.8-1.2-5.2-2.1-7-2.1s-4.2.9-7 2.1zM8 10.2l8.2-1.6c-2.4 1.2-4 2.5-4 4.1s1.6 2.9 4 4.1L8 15.2c1.5-.9 2.4-2 2.4-3.1S9.5 11.1 8 10.2zm48 0c-1.5.9-2.4 2-2.4 3.1s.9 2.2 2.4 3.1l-8.2 1.6c2.4-1.2 4-2.5 4-4.1s-1.6-2.9-4-4.1L56 10.2z"/></svg>`,
 }
 
 const pad = (n) => String(n).padStart(2, '0')
@@ -472,34 +474,52 @@ app.innerHTML = `
     </section>
 
     <section class="section order-section" id="order">
-      <div class="wrap order-layout">
-        <div class="order-copy">
-          <p class="section-index"><span></span> Hungry already?</p>
-          <h2>
-            <span class="line"><span class="line-inner">Order your</span></span>
-            <span class="line"><span class="line-inner italic">Biryani</span></span>
-          </h2>
-          <p class="section-note">Freshly prepared. Packed with flavour. Ready for you.</p>
-        </div>
-        <div class="order-details">
-          <div class="order-numbers">
-            <div>
-              <p class="eyebrow">Call to Order</p>
-              <a href="${LINKS.callPrimary}">${CONTACT.primaryDisplay}</a>
-              <a href="${LINKS.callSecondary}">${CONTACT.secondaryDisplay}</a>
+      <div class="wrap">
+        <div class="order-frame">
+          <span class="order-mark" aria-hidden="true">B</span>
+          <span class="order-corner order-corner-tl" aria-hidden="true"></span>
+          <span class="order-corner order-corner-tr" aria-hidden="true"></span>
+          <span class="order-corner order-corner-bl" aria-hidden="true"></span>
+          <span class="order-corner order-corner-br" aria-hidden="true"></span>
+          <span class="order-ornament order-ornament-t" aria-hidden="true">${icon.fleuron}</span>
+          <span class="order-ornament order-ornament-b" aria-hidden="true">${icon.fleuron}</span>
+          <span class="order-ornament order-ornament-l" aria-hidden="true">${icon.fleuron}</span>
+          <span class="order-ornament order-ornament-r" aria-hidden="true">${icon.fleuron}</span>
+
+          <div class="order-layout">
+            <div class="order-copy">
+              <p class="order-kicker">Hungry already?</p>
+              <h2>
+                <span class="line"><span class="line-inner">Order your</span></span>
+                <span class="line"><span class="line-inner script">Biryani</span></span>
+              </h2>
+              <div class="order-rule" aria-hidden="true">${icon.fleuron}</div>
+              <p class="order-note">Freshly prepared. Packed with flavour. Ready for you.</p>
             </div>
-            <div>
-              <p class="eyebrow">WhatsApp Orders</p>
-              <a href="${LINKS.whatsapp}" target="_blank" rel="noopener noreferrer">${CONTACT.primaryDisplay}</a>
+
+            <div class="order-panel order-call">
+              <span class="order-icon" aria-hidden="true">${icon.phone}</span>
+              <p class="order-label">Call to Order</p>
+              <div class="order-numbers">
+                <a href="${LINKS.callPrimary}">${CONTACT.primaryDisplay}</a>
+                <a href="${LINKS.callSecondary}">${CONTACT.secondaryDisplay}</a>
+              </div>
+              <a class="btn btn-order" href="${LINKS.callPrimary}">
+                ${icon.phone} Call Now
+              </a>
             </div>
-          </div>
-          <div class="order-actions">
-            <a class="btn btn-gold" href="${LINKS.callPrimary}">
-              ${icon.phone} Call ${CONTACT.primaryDisplay}
-            </a>
-            <a class="btn btn-chili" href="${LINKS.whatsapp}" target="_blank" rel="noopener noreferrer">
-              ${icon.chat} Order on WhatsApp
-            </a>
+
+            <div class="order-panel order-wa">
+              <span class="order-icon" aria-hidden="true">${icon.whatsapp}</span>
+              <p class="order-label">WhatsApp Orders</p>
+              <div class="order-numbers">
+                <a href="${LINKS.whatsapp}" target="_blank" rel="noopener noreferrer">${CONTACT.primaryDisplay}</a>
+              </div>
+              <div class="order-mini-rule" aria-hidden="true"></div>
+              <a class="btn btn-order" href="${LINKS.whatsapp}" target="_blank" rel="noopener noreferrer">
+                ${icon.whatsapp} Order on WhatsApp
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -819,12 +839,22 @@ const initMotion = () => {
     scrollTrigger: { trigger: '.map-frame', start: 'top 82%', once: true },
   })
 
-  gsap.from('.order-details > *', {
-    y: 24,
+  gsap.from('.order-frame', {
+    y: 28,
     autoAlpha: 0,
-    duration: 0.8,
+    duration: 0.95,
+    ease: 'power3.out',
+    clearProps: 'all',
+    scrollTrigger: { trigger: '.order-section', start: 'top 80%', once: true },
+  })
+
+  gsap.from('.order-copy > *, .order-panel', {
+    y: 18,
+    autoAlpha: 0,
+    duration: 0.7,
     stagger: 0.1,
     ease: 'power3.out',
+    clearProps: 'all',
     scrollTrigger: { trigger: '.order-section', start: 'top 75%', once: true },
   })
 
