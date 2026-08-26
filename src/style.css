@@ -815,7 +815,7 @@ svg {
 
 .story-photo img {
   aspect-ratio: 4 / 5;
-  object-position: 42% 12%;
+  object-position: 72% 40%;
 }
 
 .story-photo figcaption {
@@ -909,10 +909,16 @@ svg {
 .review-card p {
   margin: 0.9rem 0 1.15rem;
   font-family: var(--serif);
-  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  font-size: clamp(1.15rem, 2.2vw, 1.38rem);
   font-style: italic;
-  line-height: 1.45;
+  line-height: 1.4;
   color: var(--cream);
+}
+
+.review-card:first-child p {
+  font-size: 0.98rem;
+  line-height: 1.55;
+  max-width: none;
 }
 
 .review-card footer {
@@ -1368,8 +1374,9 @@ svg {
   }
 
   .review-card:first-child p {
-    max-width: 44rem;
-    font-size: 1.25rem;
+    font-size: 1.05rem;
+    line-height: 1.55;
+    max-width: none;
   }
 
   .review-card:nth-child(n + 2) {
