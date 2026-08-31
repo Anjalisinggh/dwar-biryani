@@ -40,7 +40,7 @@ const IMAGES = {
   hero: u('photo-1589302168068-964664d93dc0', 2000),
   menuArch: '/assets/biryani-2.jpg',
   finalCta: '/assets/biryani-3.jpg',
-  owner: '/assets/owner.jpg',
+  owner: '/assets/owner.jpeg',
 }
 
 const NAV = [
