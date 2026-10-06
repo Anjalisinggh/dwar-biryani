@@ -2,7 +2,7 @@
 
 The official website for **Biryani Dwar**, an authentic chicken biryani restaurant in Harnaut, Bihar. Fragrant basmati, carefully blended spices and generous portions from ₹80.
 
-**Live:** [dwar-biryani.vercel.app](https://dwar-biryani.vercel.app)
+**Live:** [www.biryanidwar.com](https://www.biryanidwar.com)
 
 ## Features
 
